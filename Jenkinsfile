@@ -5,7 +5,6 @@ pipeline {
             steps {
                 sh "rm -rf movie-analyst-ui"
                 sh "git clone https://github.com/ScastellanosM/movie-analyst-ui.git"
-                sh "mvn clean -f movie-analyst-ui"
             }
         }
     }
