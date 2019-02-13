@@ -2,10 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Build Front'){
-            steps {
-                dir('/var/lib/jenkins/workspace') {
-                    sh "pwd"
-                    sh "cd .. | tar -zcvf movieanalyst-website.tar.gz FrontA_master" 
+            steps { 
+                dir('/var/lib/jenkins/workspace/Artifacts_repo') {
+                    sh "tar -zcvf movieanalyst-website.tar.gz FrontA_master" 
             }     
             }
         }
