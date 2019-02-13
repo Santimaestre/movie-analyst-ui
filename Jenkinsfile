@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Front A-B') {
+        stage('Clone Front') {
             steps {
                 sh "rm -rf movie-analyst-ui"
                 sh "git clone https://github.com/ScastellanosM/movie-analyst-ui.git"
