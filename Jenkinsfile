@@ -1,15 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Front') {
-            steps {
-                sh "rm -rf movie-analyst-ui"
-                sh "git clone https://github.com/ScastellanosM/movie-analyst-ui.git"
-            }
-        }
         stage('Build Front'){
             steps {
-                sh "zip -r movie-analyst-ui.zip /var/lib/jenkins/workspace/FrontA_master"      
+                sh "zip -r movieanalyst-website.zip /var/lib/jenkins/workspace/FrontA_master"      
             }
         }
         stage('Deploy Front Server A'){
