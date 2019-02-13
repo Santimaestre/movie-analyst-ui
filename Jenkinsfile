@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('Clone Front A-B') {
             steps {
-                sh "git clone https://github.com/ScastellanosM/movie-analyst-ui.git"
                 sh "rm -rf movie-analyst-ui"
+                sh "rm -rf movie-analyst-api"
+                sh "git clone https://github.com/ScastellanosM/movie-analyst-ui.git"
+                sh "git clone https://github.com/ScastellanosM/movie-analyst-api.git"
             }
         }
         stage('Build Front A-B'){
