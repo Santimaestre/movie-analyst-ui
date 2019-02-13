@@ -5,6 +5,7 @@ pipeline {
             steps { 
                 dir('/var/lib/jenkins/workspace') {
                     sh "tar -zcvf movieanalyst-website.tar.gz FrontA_master" 
+                    sh "mv movieanalyst-website.tar.gz Artifacts_repo"
             }     
             }
         }
