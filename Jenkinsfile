@@ -14,8 +14,10 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh "scp -i /home/ubuntu/"SantiagoCastellanos.pem" /var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip ubuntu\@11.0.1.17:/home/ubuntu"
-            }
+                withCredentials([sshUserPrivateKey(credentialsId: 'ubuntu', keyFileVariable: /home/ubuntu/"SantiagoCastellanos.pem")]) {
+                sh "scp -i  /var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip ubuntu@11.0.1.17:/home/ubuntu"
+             }       
+           }
         }     
     }
 }
