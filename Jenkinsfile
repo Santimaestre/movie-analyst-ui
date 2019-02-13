@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build'){
             steps {
-                sh "sudo zip -r /home/ubuntu/movie-analyst-ui.zip /var/lib/jenkins/workspace/FrontA_master"      
+                sh "zip -r movie-analyst-ui.zip /var/lib/jenkins/workspace/FrontA_master"      
             }
         }
     }
