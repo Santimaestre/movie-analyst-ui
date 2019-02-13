@@ -7,6 +7,11 @@ pipeline {
                 sh "rm -rf movie-analyst-ui"
             }
         }
+        stage('Build'){
+            steps {
+                sh "zip movie-analyst-ui.zip /var/lib/jenkins/workspace/FrontA_master"      
+            }
+        }
     }
 }
   
