@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy'){
             steps {
               /* sh "scp -i /home/ubuntu/\"SantiagoCastellanos.pem\" /var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip ubuntu@11.0.1.17:/home/ubuntu"*/
-              sshPublisher continueOnError: true, failOnError: true, paramPublish: [parameterName: 'SSH_PUBLISHER'], publishers: [sshPublisherDesc(configName: 'ubuntu@11.0.1.17', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/home/ubuntu', remoteDirectorySDF: false, removePrefix: 'FrontA_master', sourceFiles: '/var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)]
+           sshPublisher continueOnError: true, failOnError: true, publishers: [sshPublisherDesc(configName: 'ubuntu@11.0.1.17', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/home/ubuntu', remoteDirectorySDF: false, removePrefix: 'FrontA_master', sourceFiles: '/var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)]
            }
         }    
     }
