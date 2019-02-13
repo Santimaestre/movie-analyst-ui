@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build'){
             steps {
-                archiveArtifacts '/var/lib/jenkins/workspace/FrontA_master/*'         
+                archiveArtifacts '/var/lib/jenkins/workspace/FrontA_master'         
             }
         }
     }
