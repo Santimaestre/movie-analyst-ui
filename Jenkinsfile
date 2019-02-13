@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Deploy Front Server A'){
             steps {
-               sh "scp -i /home/ubuntu/SantiagoCastellanos.pem /var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip ubuntu@11.0.1.17:/home/ubuntu"
+               sh "scp -i /home/ubuntu/SantiagoCastellanos.pem -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip ubuntu@11.0.1.17:/home/ubuntu"
            }
         }  
         stage('Deploy Front Server B'){
             steps {
-               sh "scp -i /home/ubuntu/SantiagoCastellanos.pem /var/lib/jenkins/workspace/FrontB_master/movie-analyst-ui.zip ubuntu@11.0.2.108:/home/ubuntu"
+               sh "scp -i /home/ubuntu/SantiagoCastellanos.pem -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/FrontB_master/movie-analyst-ui.zip ubuntu@11.0.2.108:/home/ubuntu"
            }
         } 
        /* stage('Deploy Back Server '){
