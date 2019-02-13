@@ -14,8 +14,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh "scp  /var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip ubuntu@11.0.1.17:/home/ubuntu"
-             }       
+                sh "scp  /var/lib/jenkins/workspace/FrontA_master/movie-analyst-ui.zip ubuntu@11.0.1.17:/home/ubuntu"      
            }
         }     
     }
