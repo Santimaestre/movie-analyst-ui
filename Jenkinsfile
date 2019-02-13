@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Build Front'){
             steps {
-                sh "cd .."
-                sh "tar cvzf FrontA_master/movieanalyst-website.tar.gz FrontA_master"      
+                sh "tar cvzf movieanalyst-website.tar.gz FrontA_master"      
             }
         }
         stage('Deploy Front Server A'){
