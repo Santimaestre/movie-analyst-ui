@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Front A-B'){
             steps {
-                sh "zip -r movie-analyst-ui.zip /var/lib/jenkins/workspace/Front"      
+                sh "zip -r movie-analyst-ui.zip /var/lib/jenkins/workspace/FrontA_master"      
             }
         }
         stage('Deploy Front Server A'){
