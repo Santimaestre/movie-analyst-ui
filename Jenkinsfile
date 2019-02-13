@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build Front'){
             steps { 
-                dir('/var/lib/jenkins/workspace/Artifacts_repo') {
-                    sh "tar -zcvf movieanalyst-website.tar.gz FrontA_master" 
+                dir('/var/lib/jenkins/workspace') {
+                    sh "tar -zcvf /Artifacts_repo/movieanalyst-website.tar.gz FrontA_master" 
             }     
             }
         }
