@@ -26,12 +26,12 @@ pipeline {
         } 
         stage("Restart Service Front A"){
             steps {   
-               sh ' ssh ubuntu@11.0.1.17 "sudo chown ubuntu:ubuntu /home/ubuntu/.pm2/rpc.sock /home/ubuntu/.pm2/pub.sock ; pm2 restart server"' 
+               sh ' ssh ubuntu@11.0.1.17 "sudo chown ubuntu:ubuntu /home/ubuntu/.pm2/rpc.sock /home/ubuntu/.pm2/pub.sock ; pm2 stop server ; pm2 start server"' 
            }
         }  
         stage("Restart Service Front B"){
             steps {   
-               sh ' ssh ubuntu@11.0.2.108 "sudo chown ubuntu:ubuntu /home/ubuntu/.pm2/rpc.sock /home/ubuntu/.pm2/pub.sock ; pm2 restart server"'   
+               sh ' ssh ubuntu@11.0.2.108 "sudo chown ubuntu:ubuntu /home/ubuntu/.pm2/rpc.sock /home/ubuntu/.pm2/pub.sock ; pm2 stop server ; pm2 start server"'   
            }
         }  
     }
