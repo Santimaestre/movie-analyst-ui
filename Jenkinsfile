@@ -29,7 +29,7 @@ pipeline {
                sh ' ssh ubuntu@11.0.1.17 "echo Hello"'   
            }
         }  
-        stage("Restart Service Front A"){
+        stage("Restart Service Front B"){
             steps {   
                sh ' ssh ubuntu@11.0.2.108 "echo Hello"'   
            }
