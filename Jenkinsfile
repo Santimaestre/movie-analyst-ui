@@ -26,7 +26,7 @@ pipeline {
         } 
         stage("Restart Service Front A"){
             steps {   
-               sh ' ssh ubuntu@11.0.1.17 "pm2 restar server"' 
+               sh ' ssh ubuntu@11.0.1.17 "pm2 restart server"' 
            }
         }  
         stage("Restart Service Front B"){
