@@ -24,9 +24,14 @@ pipeline {
            }     
            }       
         } 
-        stage("Restart Service"){
+        stage("Restart Service Front A"){
             steps {   
                sh ' ssh ubuntu@11.0.1.17 "echo Hello"'   
+           }
+        }  
+        stage("Restart Service Front A"){
+            steps {   
+               sh ' ssh ubuntu@11.0.2.108 "echo Hello"'   
            }
         }  
     }
